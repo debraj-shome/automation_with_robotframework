@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-08-24T19:00:20.292184" rpa="false" schemaversion="5">
+<suite id="s1" name="LoginTests" source="C:\Users\User-388-PC\Downloads\OneDrive_2026-01-30\Testing materials\automation_with_robotframework\Test Cases\LoginTests.robot">
+<kw name="Open Browser To OrangeHRM" owner="CommonKeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-08-24T19:00:20.501879" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-08-24T19:00:20.501636" elapsed="5.372120"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-08-24T19:00:25.874062" elapsed="0.036857"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2026-08-24T19:00:25.911219" elapsed="0.001676"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${ACTION_DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-08-24T19:00:25.913118" elapsed="0.000368"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:00:20.501031" elapsed="5.412561"/>
+</kw>
+<test id="s1-t1" name="TC_ORANGEHRM_001 - Login With Valid Username And Valid Password" line="18">
+<kw name="Go To" owner="SeleniumLibrary" type="SETUP">
+<msg time="2026-08-24T19:00:25.915096" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-08-24T19:00:25.914748" elapsed="1.451580"/>
+</kw>
+<kw name="Login With Credentials" owner="LoginKeywords">
+<kw name="Enter Username" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:00:27.371102" elapsed="2.069865"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-24T19:00:29.442028" level="INFO">Typing text 'Admin' into text field 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input'.</msg>
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-24T19:00:29.441409" elapsed="3.135236"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2026-08-24T19:00:27.370565" elapsed="5.206720"/>
+</kw>
+<kw name="Enter Password" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:00:32.579642" elapsed="2.048462"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-24T19:00:34.628799" level="INFO">Typing text 'admin123' into text field 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input'.</msg>
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-24T19:00:34.628404" elapsed="3.070902"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2026-08-24T19:00:32.578256" elapsed="5.121234"/>
+</kw>
+<kw name="Click Login Button" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:00:37.700461" elapsed="2.018465"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-08-24T19:00:39.719476" level="INFO">Clicking button 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button'.</msg>
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-24T19:00:39.719212" elapsed="5.148397"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:00:37.699901" elapsed="7.167932"/>
+</kw>
+<arg>${VALID_USERNAME}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<status status="PASS" start="2026-08-24T19:00:27.369717" elapsed="17.498252"/>
+</kw>
+<kw name="Verify Dashboard" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div[1]/header/div[1]/div[1]</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:00:44.869356" elapsed="3.761801"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:00:44.868636" elapsed="3.763238"/>
+</kw>
+<kw name="Logout From OrangeHRM" owner="LoginKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-24T19:00:48.636577" level="INFO">Clicking element 'xpath=//*[@id="app"]/div[1]/div[1]/header/div[1]/div[3]/ul/li/span/i'.</msg>
+<arg>xpath=//*[@id="app"]/div[1]/div[1]/header/div[1]/div[3]/ul/li/span/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-24T19:00:48.635397" elapsed="2.112711"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div[1]/header/div[1]/div[3]/ul/li/ul/li[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:00:50.748746" elapsed="2.057429"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-24T19:00:52.808162" level="INFO">Clicking element 'xpath=//*[@id="app"]/div[1]/div[1]/header/div[1]/div[3]/ul/li/ul/li[4]/a'.</msg>
+<arg>xpath=//*[@id="app"]/div[1]/div[1]/header/div[1]/div[3]/ul/li/ul/li[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-24T19:00:52.807111" elapsed="3.042043"/>
+</kw>
+<kw name="Verify Login Page Is Displayed" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>name=username</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:00:55.849741" elapsed="2.033522"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:00:55.849414" elapsed="2.034265"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:00:48.633553" elapsed="9.250379"/>
+</kw>
+<kw name="Capture Screenshot on Failure" owner="CommonKeywords" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-08-24T19:00:57.886579" elapsed="0.001315"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:00:57.885421" elapsed="0.002828"/>
+</kw>
+<doc>Verify that a registered user can log in successfully.</doc>
+<tag>Positive</tag>
+<tag>Regression</tag>
+<tag>Smoke</tag>
+<status status="PASS" start="2026-08-24T19:00:25.913710" elapsed="31.975126"/>
+</test>
+<test id="s1-t2" name="TC_ORANGEHRM_002 - Login With Invalid Username And Valid Password" line="30">
+<kw name="Go To" owner="SeleniumLibrary" type="SETUP">
+<msg time="2026-08-24T19:00:57.894948" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-08-24T19:00:57.894039" elapsed="1.461912"/>
+</kw>
+<kw name="Login With Credentials" owner="LoginKeywords">
+<kw name="Enter Username" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:00:59.361307" elapsed="2.049905"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-24T19:01:01.411692" level="INFO">Typing text 'Debraj' into text field 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input'.</msg>
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-24T19:01:01.411421" elapsed="3.085046"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2026-08-24T19:00:59.359760" elapsed="5.137028"/>
+</kw>
+<kw name="Enter Password" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:01:04.498142" elapsed="2.024131"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-24T19:01:06.524181" level="INFO">Typing text 'admin123' into text field 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input'.</msg>
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-24T19:01:06.523018" elapsed="3.164315"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2026-08-24T19:01:04.497284" elapsed="5.190630"/>
+</kw>
+<kw name="Click Login Button" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:01:09.689691" elapsed="2.038831"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-08-24T19:01:11.729826" level="INFO">Clicking button 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button'.</msg>
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-24T19:01:11.729131" elapsed="5.078878"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:01:09.688672" elapsed="7.119943"/>
+</kw>
+<arg>${INVALID_USERNAME}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<status status="PASS" start="2026-08-24T19:00:59.357594" elapsed="17.451407"/>
+</kw>
+<kw name="Verify Invalid Credentials Message" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/div/div[1]/div[1]</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:01:16.811925" elapsed="3.264940"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:01:16.810856" elapsed="3.266604"/>
+</kw>
+<kw name="Capture Screenshot on Failure" owner="CommonKeywords" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-08-24T19:01:20.080814" elapsed="0.001553"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:01:20.079169" elapsed="0.003678"/>
+</kw>
+<doc>Verify login is rejected for an unregistered username.</doc>
+<tag>Negative</tag>
+<tag>Regression</tag>
+<status status="PASS" start="2026-08-24T19:00:57.891198" elapsed="22.192306"/>
+</test>
+<test id="s1-t3" name="TC_ORANGEHRM_003 - Login With Valid Username And Invalid Password" line="40">
+<kw name="Go To" owner="SeleniumLibrary" type="SETUP">
+<msg time="2026-08-24T19:01:20.090148" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-08-24T19:01:20.088719" elapsed="1.486492"/>
+</kw>
+<kw name="Login With Credentials" owner="LoginKeywords">
+<kw name="Enter Username" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:01:21.579762" elapsed="2.048976"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-24T19:01:23.631053" level="INFO">Typing text 'Admin' into text field 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input'.</msg>
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-24T19:01:23.629680" elapsed="3.106448"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2026-08-24T19:01:21.578694" elapsed="5.158053"/>
+</kw>
+<kw name="Enter Password" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:01:26.740477" elapsed="2.053206"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-24T19:01:28.795442" level="INFO">Typing text 'admin1234' into text field 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input'.</msg>
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-24T19:01:28.794550" elapsed="3.151829"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2026-08-24T19:01:26.737742" elapsed="5.209250"/>
+</kw>
+<kw name="Click Login Button" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:01:31.949304" elapsed="2.052410"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-08-24T19:01:34.003045" level="INFO">Clicking button 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button'.</msg>
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-24T19:01:34.002337" elapsed="5.196870"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:01:31.947893" elapsed="7.251484"/>
+</kw>
+<arg>${VALID_USERNAME}</arg>
+<arg>${INVALID_PASSWORD}</arg>
+<status status="PASS" start="2026-08-24T19:01:21.576887" elapsed="17.622584"/>
+</kw>
+<kw name="Verify Invalid Credentials Message" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/div/div[1]/div[1]</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:01:39.200457" elapsed="4.064144"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:01:39.200051" elapsed="4.065264"/>
+</kw>
+<kw name="Capture Screenshot on Failure" owner="CommonKeywords" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-08-24T19:01:43.268449" elapsed="0.001345"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:01:43.266914" elapsed="0.003347"/>
+</kw>
+<doc>Verify login is rejected for an invalid password.</doc>
+<tag>Negative</tag>
+<tag>Regression</tag>
+<status status="PASS" start="2026-08-24T19:01:20.085978" elapsed="23.184931"/>
+</test>
+<test id="s1-t4" name="TC_ORANGEHRM_004 - Login With Uppercase Password" line="50">
+<kw name="Go To" owner="SeleniumLibrary" type="SETUP">
+<msg time="2026-08-24T19:01:43.276094" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-08-24T19:01:43.275504" elapsed="1.646254"/>
+</kw>
+<kw name="Login With Credentials" owner="LoginKeywords">
+<kw name="Enter Username" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:01:44.926525" elapsed="2.050663"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-24T19:01:46.979794" level="INFO">Typing text 'Admin' into text field 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input'.</msg>
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-24T19:01:46.978257" elapsed="3.086809"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2026-08-24T19:01:44.925330" elapsed="5.140240"/>
+</kw>
+<kw name="Enter Password" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:01:50.068568" elapsed="2.053936"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-24T19:01:52.124380" level="INFO">Typing text 'ADMIN123' into text field 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input'.</msg>
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-24T19:01:52.123262" elapsed="3.142888"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2026-08-24T19:01:50.066512" elapsed="5.200066"/>
+</kw>
+<kw name="Click Login Button" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:01:55.268182" elapsed="2.032681"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-08-24T19:01:57.302695" level="INFO">Clicking button 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button'.</msg>
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-24T19:01:57.301695" elapsed="5.161157"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:01:55.267229" elapsed="7.196088"/>
+</kw>
+<arg>${VALID_USERNAME}</arg>
+<arg>${UPPERCASE_PASSWORD}</arg>
+<status status="PASS" start="2026-08-24T19:01:44.923584" elapsed="17.540035"/>
+</kw>
+<kw name="Verify Invalid Credentials Message" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/div/div[1]/div[1]</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:02:02.466131" elapsed="3.460041"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:02:02.464975" elapsed="3.461675"/>
+</kw>
+<kw name="Capture Screenshot on Failure" owner="CommonKeywords" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-08-24T19:02:05.929546" elapsed="0.001106"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:02:05.928326" elapsed="0.002704"/>
+</kw>
+<doc>Verify login fails when the valid password is entered in uppercase.</doc>
+<tag>Boundary</tag>
+<tag>Negative</tag>
+<tag>Regression</tag>
+<status status="PASS" start="2026-08-24T19:01:43.272968" elapsed="22.658670"/>
+</test>
+<test id="s1-t5" name="TC_ORANGEHRM_005 - Login Without Username And Password" line="60">
+<kw name="Go To" owner="SeleniumLibrary" type="SETUP">
+<msg time="2026-08-24T19:02:05.939035" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-08-24T19:02:05.937895" elapsed="1.583413"/>
+</kw>
+<kw name="Click Login Button" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:02:07.523967" elapsed="2.037187"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-08-24T19:02:09.562411" level="INFO">Clicking button 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button'.</msg>
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-24T19:02:09.561714" elapsed="5.116771"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:02:07.522872" elapsed="7.156045"/>
+</kw>
+<kw name="Verify Username Required Message" owner="LoginKeywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/span</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-08-24T19:02:14.681177" elapsed="1.029679"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:02:14.680139" elapsed="1.031146"/>
+</kw>
+<kw name="Verify Password Required Message" owner="LoginKeywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/span</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-08-24T19:02:15.713487" elapsed="1.031351"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:02:15.712455" elapsed="1.032767"/>
+</kw>
+<kw name="Capture Screenshot on Failure" owner="CommonKeywords" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-08-24T19:02:16.747524" elapsed="0.000864"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:02:16.746572" elapsed="0.002107"/>
+</kw>
+<doc>Verify required validation messages when both fields are empty.</doc>
+<tag>Negative</tag>
+<tag>Regression</tag>
+<tag>Validation</tag>
+<status status="PASS" start="2026-08-24T19:02:05.934275" elapsed="10.814984"/>
+</test>
+<test id="s1-t6" name="TC_ORANGEHRM_006 - Login With Password Only" line="69">
+<kw name="Go To" owner="SeleniumLibrary" type="SETUP">
+<msg time="2026-08-24T19:02:16.755249" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-08-24T19:02:16.754388" elapsed="1.574904"/>
+</kw>
+<kw name="Enter Password" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:02:18.332282" elapsed="2.039310"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-24T19:02:20.373114" level="INFO">Typing text 'admin123' into text field 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input'.</msg>
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-24T19:02:20.372259" elapsed="3.125616"/>
+</kw>
+<arg>${VALID_PASSWORD}</arg>
+<status status="PASS" start="2026-08-24T19:02:18.330949" elapsed="5.167376"/>
+</kw>
+<kw name="Click Login Button" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:02:23.502112" elapsed="2.062223"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-08-24T19:02:25.565655" level="INFO">Clicking button 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button'.</msg>
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-24T19:02:25.564955" elapsed="5.157423"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:02:23.499536" elapsed="7.223466"/>
+</kw>
+<kw name="Verify Username Required Message" owner="LoginKeywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/span</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-08-24T19:02:30.725212" elapsed="1.024578"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:02:30.724193" elapsed="1.026418"/>
+</kw>
+<kw name="Capture Screenshot on Failure" owner="CommonKeywords" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-08-24T19:02:31.754340" elapsed="0.001564"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:02:31.752577" elapsed="0.003970"/>
+</kw>
+<doc>Verify username required validation when only password is entered.</doc>
+<tag>Negative</tag>
+<tag>Regression</tag>
+<tag>Validation</tag>
+<status status="PASS" start="2026-08-24T19:02:16.751359" elapsed="15.005820"/>
+</test>
+<test id="s1-t7" name="TC_ORANGEHRM_007 - Login With Username Only" line="80">
+<kw name="Go To" owner="SeleniumLibrary" type="SETUP">
+<msg time="2026-08-24T19:02:31.762995" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-08-24T19:02:31.762046" elapsed="1.589492"/>
+</kw>
+<kw name="Enter Username" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:02:33.354558" elapsed="2.051255"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-24T19:02:35.407483" level="INFO">Typing text 'Admin' into text field 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input'.</msg>
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-24T19:02:35.406507" elapsed="3.139632"/>
+</kw>
+<arg>${VALID_USERNAME}</arg>
+<status status="PASS" start="2026-08-24T19:02:33.353143" elapsed="5.193515"/>
+</kw>
+<kw name="Click Login Button" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:02:38.549770" elapsed="2.036135"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-08-24T19:02:40.587388" level="INFO">Clicking button 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button'.</msg>
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-24T19:02:40.586604" elapsed="5.152775"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:02:38.548172" elapsed="7.191759"/>
+</kw>
+<kw name="Verify Password Required Message" owner="LoginKeywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/span</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-08-24T19:02:45.742131" elapsed="1.023119"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:02:45.741166" elapsed="1.024588"/>
+</kw>
+<kw name="Capture Screenshot on Failure" owner="CommonKeywords" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-08-24T19:02:46.768267" elapsed="0.001005"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:02:46.767162" elapsed="0.002433"/>
+</kw>
+<doc>Verify password required validation when only username is entered.</doc>
+<tag>Negative</tag>
+<tag>Regression</tag>
+<tag>Validation</tag>
+<status status="PASS" start="2026-08-24T19:02:31.759705" elapsed="15.010497"/>
+</test>
+<test id="s1-t8" name="TC_ORANGEHRM_008 - Login With SQL Injection Payload" line="91">
+<kw name="Go To" owner="SeleniumLibrary" type="SETUP">
+<msg time="2026-08-24T19:02:46.774472" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-08-24T19:02:46.773869" elapsed="1.456468"/>
+</kw>
+<kw name="Login With Credentials" owner="LoginKeywords">
+<kw name="Enter Username" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:02:48.232328" elapsed="2.017375"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-24T19:02:50.250720" level="INFO">Typing text '' OR '1'='1' into text field 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input'.</msg>
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-24T19:02:50.250118" elapsed="3.109388"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2026-08-24T19:02:48.231862" elapsed="5.128116"/>
+</kw>
+<kw name="Enter Password" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:02:53.361992" elapsed="2.041166"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-24T19:02:55.403896" level="INFO">Typing text '' OR '1'='1' into text field 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input'.</msg>
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-24T19:02:55.403472" elapsed="3.136314"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2026-08-24T19:02:53.360725" elapsed="5.179530"/>
+</kw>
+<kw name="Click Login Button" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:02:58.542055" elapsed="2.046525"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-08-24T19:03:00.589430" level="INFO">Clicking button 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button'.</msg>
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-24T19:03:00.588990" elapsed="5.115130"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:02:58.540989" elapsed="7.163588"/>
+</kw>
+<arg>${SQL_INJECTION}</arg>
+<arg>${SQL_INJECTION}</arg>
+<status status="PASS" start="2026-08-24T19:02:48.231116" elapsed="17.473770"/>
+</kw>
+<kw name="Verify Invalid Credentials Message" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/div/div[1]/div[1]</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:03:05.707057" elapsed="3.646567"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:03:05.705997" elapsed="3.648045"/>
+</kw>
+<kw name="Capture Screenshot on Failure" owner="CommonKeywords" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-08-24T19:03:09.356415" elapsed="0.000960"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:03:09.355275" elapsed="0.002404"/>
+</kw>
+<doc>Verify SQL injection payload does not bypass authentication.</doc>
+<tag>Negative</tag>
+<tag>Security</tag>
+<tag>SQLInjection</tag>
+<status status="PASS" start="2026-08-24T19:02:46.771968" elapsed="22.586181"/>
+</test>
+<test id="s1-t9" name="TC_ORANGEHRM_009 - Login With XSS Payload" line="101">
+<kw name="Go To" owner="SeleniumLibrary" type="SETUP">
+<msg time="2026-08-24T19:03:09.363168" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-08-24T19:03:09.361926" elapsed="1.493626"/>
+</kw>
+<kw name="Login With Credentials" owner="LoginKeywords">
+<kw name="Enter Username" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:03:10.859831" elapsed="2.051834"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-24T19:03:12.912363" level="INFO">Typing text '&lt;script&gt;alert(Testing Purpose)&lt;/script&gt;' into text field 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input'.</msg>
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-24T19:03:12.911972" elapsed="3.082230"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2026-08-24T19:03:10.858631" elapsed="5.135763"/>
+</kw>
+<kw name="Enter Password" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:03:15.995490" elapsed="2.035704"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-24T19:03:18.032873" level="INFO">Typing text '&lt;script&gt;alert(Testing Purpose)&lt;/script&gt;' into text field 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input'.</msg>
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-24T19:03:18.031900" elapsed="3.108144"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2026-08-24T19:03:15.994854" elapsed="5.145388"/>
+</kw>
+<kw name="Click Login Button" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:03:21.140977" elapsed="2.015728"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-08-24T19:03:23.157314" level="INFO">Clicking button 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button'.</msg>
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-24T19:03:23.157002" elapsed="5.138570"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:03:21.140540" elapsed="7.155179"/>
+</kw>
+<arg>${XSS_PAYLOAD}</arg>
+<arg>${XSS_PAYLOAD}</arg>
+<status status="PASS" start="2026-08-24T19:03:10.856910" elapsed="17.438883"/>
+</kw>
+<kw name="Verify Login Page Is Displayed" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>name=username</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-24T19:03:28.296517" elapsed="2.016000"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:03:28.296188" elapsed="2.016499"/>
+</kw>
+<kw name="Capture Screenshot on Failure" owner="CommonKeywords" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-08-24T19:03:30.313559" elapsed="0.000357"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:03:30.313157" elapsed="0.000872"/>
+</kw>
+<doc>Verify XSS payload does not bypass authentication or execute script.</doc>
+<tag>Negative</tag>
+<tag>Security</tag>
+<tag>XSS</tag>
+<status status="PASS" start="2026-08-24T19:03:09.359887" elapsed="20.954311"/>
+</test>
+<kw name="Close Application" owner="CommonKeywords" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-08-24T19:03:33.316769" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-08-24T19:03:30.315555" elapsed="3.001587"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-08-24T19:03:33.317782" elapsed="3.193553"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:03:30.315288" elapsed="6.196238"/>
+</kw>
+<status status="PASS" start="2026-08-24T19:00:20.293917" elapsed="196.217694"/>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Boundary</stat>
+<stat pass="8" fail="0" skip="0">Negative</stat>
+<stat pass="1" fail="0" skip="0">Positive</stat>
+<stat pass="7" fail="0" skip="0">Regression</stat>
+<stat pass="2" fail="0" skip="0">Security</stat>
+<stat pass="1" fail="0" skip="0">Smoke</stat>
+<stat pass="1" fail="0" skip="0">SQLInjection</stat>
+<stat pass="3" fail="0" skip="0">Validation</stat>
+<stat pass="1" fail="0" skip="0">XSS</stat>
+</tag>
+<suite>
+<stat name="LoginTests" id="s1" pass="9" fail="0" skip="0">LoginTests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
